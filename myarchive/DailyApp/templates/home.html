@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+
+    <a href = "{% url 'create'  %}"> 게시글 업로드하기 </a>
+
+    {% for i in uploads.all %}
+        <img src="{{i.photo}}">
+        {{i.comment}}
+        <a href = "{% url 'update' i.id %}"> 게시글 수정하기 </a>
+    {% endfor %}
+
+    
+    
+    
+
+</body>
+</html>

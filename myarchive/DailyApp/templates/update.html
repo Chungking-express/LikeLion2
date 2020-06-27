@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    게시글을 수정하러 왔느냐 ?
+    <form enctype="multipart/form-data" action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input class="button" type="submit" value="regulate">
+    </form>
+
+</body>
+</html>
