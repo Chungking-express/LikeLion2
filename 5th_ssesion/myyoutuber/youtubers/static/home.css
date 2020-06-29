@@ -1,0 +1,135 @@
+.bigcontainer{
+    width: 100%;
+    height:450px;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+
+}
+.container1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:100px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 25px;
+    
+}
+.channelname{
+    width: 20%;
+    height:100%;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    border-radius: 30%;
+    margin-right: 10px;
+    background-color: rgb(247, 247, 201);
+}
+.channelname1{
+    padding-top: 25px;
+}
+.creatorname{
+    width: 20%;
+    height:100%;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30%;
+    margin-right: 10px;
+    text-align: center;
+    background-color: rgb(247, 247, 201);
+}
+.creatorname1{
+    padding-top: 25px;
+}
+.preference{
+    width: 20%;
+    height:100%;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30%;
+    margin-right: 10px;
+    text-align: center;
+    background-color: rgb(247, 247, 201);
+}
+.preference1{
+    padding-top: 5px;
+}
+.onair{
+    width: 20%;
+    height:100%;
+    flex-direction: column;
+    border-radius: 30%;
+    margin-right: 10px;
+    
+    
+}
+.subscribers{
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    border-color: black;
+    border-radius: 30%;
+    border-style: solid;
+    margin-right: 10px;
+    text-align: center;
+    background-color: rgb(247, 247, 201);
+}
+.subscribers1{
+    padding-top: 25px;
+}
+.link1{
+    width: 34%;
+    height:300px;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    margin-right: 10px;
+}
+.link2{
+    width: 33%;
+    height:300px;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    margin-right: 10px;
+}
+.link3{
+    width: 33%;
+    height:300px;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    margin-right: 10px;
+}
+.container2{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.true{
+    width: 100% ;
+    height: 85px;
+    border-radius: 30%;
+    background-color: rgb(243, 190, 109) ;
+    text-align : center ;
+    font-size: 40px;
+    color: aliceblue;
+    padding-top: 15px;
+       
+}
+.false{
+    width: 100% ;
+    height: 85px;
+    border-radius: 30%;
+    background-color: rgb(165, 160, 154) ;
+    text-align : center ;
+    font-size: 40px;
+    color: aliceblue;
+    padding-top: 15px;
+       
+}
