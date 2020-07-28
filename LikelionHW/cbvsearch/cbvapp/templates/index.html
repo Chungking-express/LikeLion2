@@ -14,10 +14,10 @@
             <div class = 'site'> CBVSEARCH </div>
             <div class = 'searchbox'>  
                 <form action = "{% url 'result' %}" method = 'GET' >
-                    <select name = "categorize contents">
+                    <select name = "type">
                         <option value="all">전체 검색</option>
                         <option value="title">제목으로 검색</option>
-                        <option value="content">내용으로 검색</option>
+                        <option value="text">내용으로 검색</option>
                         <option value="author">글쓴이로 검색</option>
                     </select>
                     <input class="input_box" type="text" name="query" value="{{query}}" placeholder="검색어를 입력해주세요">

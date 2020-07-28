@@ -17,7 +17,7 @@
                     <select name = "categorize contents">
                         <option value="all">전체 검색</option>
                         <option value="title">제목으로 검색</option>
-                        <option value="content">내용으로 검색</option>
+                        <option value="text">내용으로 검색</option>
                         <option value="author">글쓴이로 검색</option>
                     </select>
                     <input class="input_box" type="text" name="query" value="{{query}}" placeholder="검색어를 입력해주세요">
@@ -32,11 +32,11 @@
         <div class = 'middlebox'>
             <p> "{{query}}"에 대한 결과는 다음과 같습니다. </p>
             {% if result_num > 0 %}
-            {{num}} 개의 검색 결과가 있습니다.
+            {{result_num}} 개의 검색 결과가 있습니다.
             <br>
             {% for post in cbvposts %}
-            제목 : {{post.title}}
-            내용 : {{post.text}}
+            제목 : {{post.title}} <br>
+            내용 : {{post.text}} <br>
             글쓴이 : {{post.author}}
             <br><br><br>
             {% endfor %}

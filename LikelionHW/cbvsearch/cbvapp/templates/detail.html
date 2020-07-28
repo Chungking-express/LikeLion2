@@ -1,6 +1,6 @@
 <h1> 제목 - {{cbv.title}} </h1>
-내용 - {{cbv.text}}
-글 쓴이 - {{cbv.author}}
-작성 날짜 - {{cbv.time}}
-<a href="{% url 'delete' cbv.id %}"> 삭제 </a>
+내용 - {{cbv.text}} <br>
+글 쓴이 - {{cbv.author}} <br>
+작성 날짜 - {{cbv.time}} <br>
+<a href="{% url 'delete' cbv.id %}"> 삭제 </a> 
 <a href="{% url 'update' cbv.id %}"> 수정 </a>

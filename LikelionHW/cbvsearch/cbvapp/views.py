@@ -54,5 +54,5 @@ def result(request):
             cbvposts = cbvposts.filter(text__icontains=query).order_by('-time')
         elif search_type == 'author':
             cbvposts = cbvposts.filter(author__username__icontains=query).order_by('-time')
-        num = len(cbvposts)
-    return render(request, 'result.html',{'cbvposts':cbvposts , 'query':query, 'num':num})
+        result_num = len(cbvposts)
+    return render(request, 'result.html',{'cbvposts':cbvposts , 'query':query, 'result_num':result_num})
