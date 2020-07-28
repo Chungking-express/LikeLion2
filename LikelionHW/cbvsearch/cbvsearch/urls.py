@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import cbvapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',cbvapp.views.index.as_view(), name = 'index'),
+    path('detail/<pk>',cbvapp.views.detail.as_view(), name='detail'),
+    path('delete/<pk>',cbvapp.views.delete.as_view(), name = 'delete'),
+    path('update/<pk>',cbvapp.views.update.as_view(), name = 'update'),
+    path('create',cbvapp.views.create.as_view(), name = 'create'),
 ]
