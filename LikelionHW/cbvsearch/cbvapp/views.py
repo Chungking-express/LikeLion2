@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import cbv
+from django.db.models import Q
 
 class index(ListView):
     template_name = 'index.html'
@@ -17,7 +18,7 @@ class detail(DetailView):
     template_name = 'detail.html'
     context_object_name = 'cbv'
 
-class delete(DetailView):
+class delete(DeleteView):
     model = cbv
     template_name = 'delete.html'
     context_object_name = 'cbv'
@@ -39,3 +40,19 @@ class create(CreateView):
         cbv.save()
 
         return HttpResponseRedirect(self.request.POST.get('next','/'))
+
+def result(request):
+    cbvposts = cbv.objects.all()
+    query = request.GET.get('query','') 
+    search_type = request.GET.get('type','')
+    if query:
+        if search_type == 'all':
+            cbvposts = cbvposts.filter(Q(title__icontains=query)| Q(text__icontains=query) | Q(author__username__icontains=query)).order_by('-time')
+        elif search_type == 'title':
+            cbvposts = cbvposts.filter(title__icontains=query).order_by('-time')
+        elif search_type == 'text':
+            cbvposts = cbvposts.filter(text__icontains=query).order_by('-time')
+        elif search_type == 'author':
+            cbvposts = cbvposts.filter(author__username__icontains=query).order_by('-time')
+        num = len(cbvposts)
+    return render(request, 'result.html',{'cbvposts':cbvposts , 'query':query, 'num':num})

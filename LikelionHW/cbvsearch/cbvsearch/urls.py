@@ -24,4 +24,5 @@ urlpatterns = [
     path('delete/<pk>',cbvapp.views.delete.as_view(), name = 'delete'),
     path('update/<pk>',cbvapp.views.update.as_view(), name = 'update'),
     path('create',cbvapp.views.create.as_view(), name = 'create'),
+    path('reuslt/',cbvapp.views.result, name = 'result'),
 ]

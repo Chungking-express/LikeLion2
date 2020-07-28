@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBVSEARCH</title>
-    <link rel='stylesheet' href="{% static 'index.css' %}">
+    <link rel='stylesheet' href="{% static 'result.css' %}">
 </head>
 <body>
 
@@ -30,21 +30,24 @@
             
         </div>
         <div class = 'middlebox'>
-                {% for i in cbv_list %}
-            <a href="{% url 'detail' i.id %}">
-            <h1> 제목 : {{i.title}} </h1>
-            <p> 작성자 : {{i.author}}</p>
-            </a>
+            <p> "{{query}}"에 대한 결과는 다음과 같습니다. </p>
+            {% if result_num > 0 %}
+            {{num}} 개의 검색 결과가 있습니다.
+            <br>
+            {% for post in cbvposts %}
+            제목 : {{post.title}}
+            내용 : {{post.text}}
+            글쓴이 : {{post.author}}
+            <br><br><br>
             {% endfor %}
+            {% else %}
+            {{query}}에 대한 검색 결과가 없습니다.
+            {% endif %}
         </div>
-        <div class='bottom'>
-            <a href="{% url 'create' %}"> 글 작성하기 </a>
-        </div>
+        
     </div>
     
 </body>
 </html>
 
   
-
-

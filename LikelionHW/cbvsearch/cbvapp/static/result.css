@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.headbox{
+    display: flex;
+    flex-direction: row;
+}
+.middlebox{
+    display: flex;
+    flex-direction: column;
+}
